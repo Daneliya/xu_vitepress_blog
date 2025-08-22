@@ -32,3 +32,4 @@ yarn.error
 .temp/
 
 public/
+/docs/.vitepress/cache/
