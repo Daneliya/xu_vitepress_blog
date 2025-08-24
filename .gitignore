@@ -31,5 +31,4 @@ yarn.error
 .idea/
 .temp/
 
-public/
 /docs/.vitepress/cache/

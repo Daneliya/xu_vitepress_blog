@@ -1,123 +1,60 @@
 import {defineConfig} from 'vitepress'
 import nav from "./nav.mjs";
-// import AutoSidebar from "@iminu/vitepress-plugin-auto-sidebar";
-import {generateSidebar} from 'vitepress-sidebar';
+import { sidebarConfig } from "./sidebarConfig.mts";
 
-// https://vitepress.dev/reference/site-config
+// -------------------------- VitePress 主配置 --------------------------
 export default defineConfig({
-    title: "My Awesome Project",
-    description: "A VitePress Site",
+    title: "xiaolong", // 站点名
+    description: "我的文档教程", // 站点描述
+    titleTemplate: 'XXL的小屋',
+    head: [
+        ['link', {rel: 'icon', href: '/logo.png'}], // fav图标
+    ],
+    base: '/', //网站部署的路径，默认根目录
     themeConfig: {
-        // https://vitepress.dev/reference/default-theme-config
-        // 顶部跳转
-        nav,
-        // 侧边栏跳转
-        // sidebar,
-        sidebar: generateSidebar({
-            /*
-      * For detailed instructions, see the links below:
-      * https://vitepress-sidebar.jooy2.com/guide/api
-      */
-            documentRootPath: '/docs', //文档根目录
-            // scanStartPath: null,
-            // resolvePath: null,
-            // useTitleFromFileHeading: true,
-            // useTitleFromFrontmatter: true,
-            // frontmatterTitleFieldName: 'title',
-            // useFolderTitleFromIndexFile: false, //是否使用层级首页文件名做分级标题
-            // useFolderLinkFromIndexFile: false, //是否链接至层级首页文件
-            // hyphenToSpace: true,
-            // underscoreToSpace: true,
-            // capitalizeFirst: false,
-            // capitalizeEachWords: false,
-            collapsed: false, //折叠组关闭
-            collapseDepth: 2, //折叠组2级菜单
-            // sortMenusByName: false,
-            // sortMenusByFrontmatterOrder: false,
-            // sortMenusByFrontmatterDate: false,
-            // sortMenusOrderByDescending: false,
-            // sortMenusOrderNumericallyFromTitle: false,
-            // sortMenusOrderNumericallyFromLink: false,
-            // frontmatterOrderDefaultValue: 0,
-            // manualSortFileNameByPriority: ['first.md', 'second', 'third.md'], //手动排序，文件夹不用带后缀
-            removePrefixAfterOrdering: false, //删除前缀，必须与prefixSeparator一起使用
-            prefixSeparator: '.', //删除前缀的符号
-            // excludeFiles: ['first.md', 'secret.md'],
-            // excludeFilesByFrontmatterFieldName: 'exclude',
-            // excludeFolders: ['secret-folder'],
-            // includeDotFiles: false,
-            // includeRootIndexFile: false,
-            // includeFolderIndexFile: false, //是否包含层级主页
-            // includeEmptyFolder: false,
-            // rootGroupText: 'Contents',
-            // rootGroupLink: 'https://github.com/jooy2',
-            // rootGroupCollapsed: false,
-            // convertSameNameSubFileToGroupIndexPage: false,
-            // folderLinkNotIncludesFileName: false,
-            // keepMarkdownSyntaxFromTitle: false,
-            // debugPrint: false,
-        }),
+        logo: '/logo.png', // 左上角logo
+        siteTitle: 'xiaolong', // 左上角站点标题
+        search: {
+            provider: 'local' // 本地搜索
+        },
+        sitemap: {
+            hostname: 'https://luckilyxxl.xyz', // 站点地图主机名
+        },
+        outline: {
+            level: [2, 3, 4], // 右侧大纲显示2-4级标题
+            label: '当前页大纲'
+        },
+        nav, // 顶部导航（需确保nav的链接与侧边栏路由前缀一致）
+        sidebar: sidebarConfig, // 关键：启用隔离的侧边栏规则
+        // sidebar: {
+        //     "/Java": set_sidebar("Java"),
+        //     "/Python": set_sidebar("nuxt3")
+        // },
         socialLinks: [
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
-        ]
+        ],
+        footer: {
+            message: 'Released under the MIT License.',
+            copyright: 'Copyright © 2019-2025 present Xu XiaoLong',
+        },
+        returnToTopLabel: '返回顶部',
+        lastUpdated: {
+            text: '最后更新于',
+            formatOptions: {
+                dateStyle: 'full',
+                timeStyle: 'medium'
+            }
+        },
+        docFooter: {
+            prev: "上一页",
+            next: "下一页",
+        },
     },
     markdown: {
-        // 行号
-        lineNumbers: true,
+        lineNumbers: true, // 代码行号
         image: {
-            // 默认禁用；设置为 true 可为所有图片启用懒加载。
-            lazyLoading: true
-        }
+            lazyLoading: true // 图片懒加载
+        },
+        math: true // 支持数学公式
     },
-    // vite: {
-    //     plugins: [
-    //         AutoSidebar(),
-    //     ],
-    // },
 })
-
-const vitepressSidebarOptions = {
-    /* Options... */
-    /*
-     * For detailed instructions, see the links below:
-     * https://vitepress-sidebar.jooy2.com/guide/api
-     */
-    documentRootPath: '/docs', //文档根目录
-    // scanStartPath: null,
-    // resolvePath: null,
-    // useTitleFromFileHeading: true,
-    // useTitleFromFrontmatter: true,
-    // frontmatterTitleFieldName: 'title',
-    // useFolderTitleFromIndexFile: false, //是否使用层级首页文件名做分级标题
-    // useFolderLinkFromIndexFile: false, //是否链接至层级首页文件
-    // hyphenToSpace: true,
-    // underscoreToSpace: true,
-    // capitalizeFirst: false,
-    // capitalizeEachWords: false,
-    collapsed: false, //折叠组关闭
-    collapseDepth: 2, //折叠组2级菜单
-    // sortMenusByName: false,
-    // sortMenusByFrontmatterOrder: false,
-    // sortMenusByFrontmatterDate: false,
-    // sortMenusOrderByDescending: false,
-    // sortMenusOrderNumericallyFromTitle: false,
-    // sortMenusOrderNumericallyFromLink: false,
-    // frontmatterOrderDefaultValue: 0,
-    // manualSortFileNameByPriority: ['first.md', 'second', 'third.md'], //手动排序，文件夹不用带后缀
-    removePrefixAfterOrdering: false, //删除前缀，必须与prefixSeparator一起使用
-    prefixSeparator: '.', //删除前缀的符号
-    // excludeFiles: ['first.md', 'secret.md'],
-    // excludeFilesByFrontmatterFieldName: 'exclude',
-    // excludeFolders: ['secret-folder'],
-    // includeDotFiles: false,
-    // includeRootIndexFile: false,
-    // includeFolderIndexFile: false, //是否包含层级主页
-    // includeEmptyFolder: false,
-    // rootGroupText: 'Contents',
-    // rootGroupLink: 'https://github.com/jooy2',
-    // rootGroupCollapsed: false,
-    // convertSameNameSubFileToGroupIndexPage: false,
-    // folderLinkNotIncludesFileName: false,
-    // keepMarkdownSyntaxFromTitle: false,
-    // debugPrint: false,
-};
