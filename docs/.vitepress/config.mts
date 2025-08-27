@@ -11,6 +11,7 @@ export default defineConfig({
         ['link', {rel: 'icon', href: '/logo.png'}], // fav图标
     ],
     base: '/', //网站部署的路径，默认根目录
+    ignoreDeadLinks: true,
     themeConfig: {
         logo: '/logo.png', // 左上角logo
         siteTitle: 'xiaolong', // 左上角站点标题

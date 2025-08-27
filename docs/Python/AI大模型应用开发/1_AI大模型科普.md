@@ -1,6 +1,6 @@
 ---
-title: ‘AI大模型科普’
-titleTemplate: ‘AI大模型科普’
+title: AI大模型科普
+titleTemplate: AI大模型科普
 deep: false
 tags:
   - Python

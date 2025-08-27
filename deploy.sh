@@ -8,8 +8,8 @@ set -e
 # npm run set NODE_OPTIONS=--openssl-legacy-provider && vuepress build .
 
 # 进入生成的文件夹
-# cd docs/.vuepress/dist
-cd ./public
+cd docs/.vitepress/dist
+#cd ./public
 
 # 如果是发布到自定义域名
 echo 'http://luckilyxxl.xyz' > CNAME

@@ -1,3 +1,13 @@
+---
+title: Vue组件
+tags:
+  - Python
+categories:
+  - Python
+---
+
+
+
 ## 简介
 
 常说的 SFC 组件，即 `Single file component` ，也就是我们的vue组件

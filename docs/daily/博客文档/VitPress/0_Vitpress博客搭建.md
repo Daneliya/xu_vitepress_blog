@@ -1,3 +1,11 @@
+---
+title: VitPress博客搭建
+tags:
+  - Python
+categories:
+  - Python
+---
+
 
 
 > 官方文档：[https://vitepress.dev/zh/](https://vitepress.dev/zh/)
