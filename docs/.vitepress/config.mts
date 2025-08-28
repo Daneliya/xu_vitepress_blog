@@ -22,7 +22,8 @@ export default defineConfig({
             hostname: 'https://luckilyxxl.xyz', // 站点地图主机名
         },
         outline: {
-            level: [2, 3, 4], // 右侧大纲显示2-4级标题
+            level: [2, 4], // 右侧大纲显示2-4级标题
+            // level: 'deep', // 显示2-6级标题
             label: '当前页大纲'
         },
         nav, // 顶部导航（需确保nav的链接与侧边栏路由前缀一致）
