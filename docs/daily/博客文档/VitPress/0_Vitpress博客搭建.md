@@ -11,6 +11,8 @@ categories:
 > 官方文档：[https://vitepress.dev/zh/](https://vitepress.dev/zh/)
 >
 > 快速上手教程：[https://vitepress.yiov.top/](https://vitepress.yiov.top/)
+>
+> 
 
 ## VitePress 是什么？
 
@@ -108,8 +110,8 @@ npx vitepress init
 
 [像编写文档一样轻松构建你的官网！-VitePress保姆级教程_vitepress模板-CSDN博客](https://blog.csdn.net/qq_44793507/article/details/142521250)
 
-侧边栏
 
-[VitePress Sidebar | 功能强大的自动侧边栏生成器](https://vitepress-sidebar.cdget.com/zhHans/)
 
-[🌟 Vitepress 侧边栏自动生成，让你更专注写作Vitepress 有个痛点，无法根据目录自动生成侧边栏。每次新 - 掘金](https://juejin.cn/post/7227358177489961018)
+从VuePress迁移至VitePress：https://notes.fe-mm.com/daily-notes/issue-37
+
+主题扩展：https://vitepress.mosong.cc/extend/

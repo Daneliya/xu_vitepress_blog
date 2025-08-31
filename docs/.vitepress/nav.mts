@@ -77,6 +77,11 @@ export default [
                 "link": "/Python/数据分析/1_Python数据分析"
             },
             {
+                "text": "爬虫",
+                "icon": "iconfont icon-AIdamoxing",
+                "link": "/Python/爬虫/1_爬虫入门"
+            },
+            {
                 "text": "AI大模型应用开发",
                 "icon": "iconfont icon-AIdamoxing",
                 "link": "/Python/AI大模型应用开发/1_AI大模型科普"
