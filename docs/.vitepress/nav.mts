@@ -79,7 +79,7 @@ export default [
             {
                 "text": "爬虫",
                 "icon": "iconfont icon-AIdamoxing",
-                "link": "/Python/爬虫/1_爬虫入门"
+                "link": "/Python/爬虫/1_爬虫的流程"
             },
             {
                 "text": "AI大模型应用开发",

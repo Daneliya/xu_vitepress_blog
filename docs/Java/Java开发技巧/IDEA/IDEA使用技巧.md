@@ -129,15 +129,56 @@ File --> Settings --> Editor--> File and Code Templates
 
 插入模板信息
 
-~~~
+~~~java
 /**
  * @Classname ${NAME}
  * @Description TODO
  * @Date ${DATE} ${TIME}
  * @Created by ${USER}
  */
+ 
+ /**
+ * @author  yd
+ * @date  ${DATE} ${TIME}
+ * @version 1.0
+ */
+ 
+ /**
+ * Created by xu_xiaolong on ${DATE}.
+ */
 ~~~
 
 方法设置模板
 
 https://blog.csdn.net/sdut406/article/details/81750858
+
+
+
+## 护眼色
+
+~~~
+File->Settings->Editor->Color Scheme->General->Text->Default text->background 199 237 204 or C7EDCC
+~~~
+
+
+
+## 在方法之间加入一条分割线
+
+~~~
+File —> Settings...—> Editor —> General —> Appearance —> Show method separators
+~~~
+
+分割线的颜色
+
+~~~
+edit —> color scheme —> general —> code（右侧面板中的code，点一下）—> method separator color
+~~~
+
+
+
+## 主题
+
+     主题网址：http://color-themes.com/?view=index
+     主题jar包：file –> import setttings –>主题jar文件 –> 确认 –> 重启
+     自定义主题导出：file –> Export setttings –> 选中保存路径--> 确认
+     更换主题后怎么改字体大小：File—Settings—Editor—Color Scheme----color scheme font
