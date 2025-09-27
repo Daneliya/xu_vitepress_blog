@@ -1,6 +1,6 @@
 import {defineConfig} from 'vitepress'
 import nav from "./nav.mjs";
-import { sidebarConfig } from "./sidebarConfig.mts";
+import {sidebarConfig} from "./sidebarConfig.mts";
 
 // -------------------------- VitePress 主配置 --------------------------
 export default defineConfig({
@@ -9,6 +9,13 @@ export default defineConfig({
     titleTemplate: 'XXL的小屋',
     head: [
         ['link', {rel: 'icon', href: '/logo.png'}], // fav图标
+        // Google adsense
+        ['script', {
+            async: 'async',
+            // 记得替换成你的真正的 src
+            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6079554807639839',
+            crossorigin: 'anonymous',
+        }]
     ],
     base: '/', //网站部署的路径，默认根目录
     ignoreDeadLinks: true,
