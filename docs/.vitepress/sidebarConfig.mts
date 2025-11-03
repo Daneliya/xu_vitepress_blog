@@ -223,6 +223,16 @@ export const dailySidebar = generateSidebar({
     scanStartPath: '/daily/', // 仅扫描Python目录
     resolvePath: '/daily/', // 侧边栏链接基础路径
     basePath: '/daily/', // 侧边栏链接基础路径
+    excludeByGlobPattern: ['面试专栏/'], // 侧边栏链接基础路径
+});
+
+// daily教程侧边栏（匹配 /Python/ 路由）
+export const interviewSidebar = generateSidebar({
+    ...vitepressSidebarOptions,
+    documentRootPath: '/docs/', // 仅扫描Python目录
+    scanStartPath: '/daily/面试专栏/', // 仅扫描Python目录
+    resolvePath: '/daily/面试专栏/', // 侧边栏链接基础路径
+    basePath: '/daily/面试专栏/', // 侧边栏链接基础路径
 });
 
 // 4. 首页/独立页面：隐藏侧边栏（如首页、关于页）
@@ -256,6 +266,7 @@ export const sidebarConfig = {
     '/Linux/': linuxSidebar, // /Python/路由下显示Python侧边栏
     '/StableDiffusion/': StableDiffusionSidebar, // /Python/路由下显示Python侧边栏
     '/daily/': dailySidebar, // /Python/路由下显示Python侧边栏
+    '/daily/面试专栏/': interviewSidebar, // /Python/路由下显示Python侧边栏
     // 2. 各导航专属侧边栏（调用通用方法，传入差异化参数）
     // '/Java/Java开发技巧/': createSidebar({
     //     scanStartPath: '/Java/Java开发技巧/',
