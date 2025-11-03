@@ -323,6 +323,105 @@ PID:800379,mem:2.3g,CPU percent:0.0% mem percent:3.7%
 
 
 
+### 系统清理
+
+当 Linux 系统中`/data`目录空间满了，可以按以下步骤逐步清理，确保安全且高效地释放空间：
+
+#### **1. 确认空间使用情况**
+
+首先通过`df`和`du`命令定位具体占用空间的文件或目录：
+
+~~~sh
+# 查看/data所在分区的总空间、已用和剩余空间
+df -h /data
+
+# 查看/data下一级目录的空间占用（从大到小排序）
+du -h --max-depth=1 /data | sort -hr
+~~~
+
+
+
+~~~sh
+root@ekroot-b760mds3hddr4:/home# du -h --max-depth=1 /data | sort -hr
+1.6T    /data
+1.5T    /data/home
+41G     /data/backup
+4.9G    /data/root
+182M    /data/mysql
+64M     /data/workspace
+648K    /data/applogs
+16K     /data/lost+found
+8.0K    /data/log
+4.0K    /data/usershare
+~~~
+
+#### **2. 常见可清理的文件类型**
+
+根据排查结果，优先清理以下几类安全且占用空间大的文件：
+
+##### **(1) 日志文件（Logs）**
+
+日志文件（如`.log`、`.out`）通常会持续增长，且旧日志可清理：
+
+```bash
+# 进入日志目录（例如）
+cd /data/logs
+
+# 查看大日志文件（大于100M的文件）
+find . -type f -size +100M -name "*.log"
+
+# 清理旧日志（保留近7天的，删除更早的）
+find . -name "*.log" -mtime +7 -delete
+
+# 或清空正在写入的日志（避免删除文件导致程序报错）
+echo "" > 正在写入的日志文件.log
+```
+
+##### **(2) 备份文件（Backups）**
+
+旧的备份文件（如`.tar`、`.gz`、`.bak`）若已确认无用，可删除：
+
+```bash
+# 查找/data下的备份文件
+find /data -type f -name "*.tar*" -o -name "*.bak"
+
+# 删除30天前的备份（确认后执行）
+find /data -type f -name "*.tar*" -mtime +30 -delete
+```
+
+##### **(3) 临时文件（Temporary Files）**
+
+应用程序可能会遗留临时文件（如`/data/tmp`目录下的文件）：
+
+```bash
+# 清理/data下的临时文件（例如7天未修改的）
+find /data -type f -path "*/tmp/*" -mtime +7 -delete
+```
+
+##### **(4) 大文件（未分类的大文件）**
+
+直接查找`/data`下大于 1G 的文件，手动确认是否可删除：
+
+```bash
+find /data -type f -size +1G -exec ls -lh {} \;
+```
+
+（例如：过时的数据库备份、无用的视频 / 音频文件等）
+
+#### **3. 注意事项**
+
+- **不要盲目删除系统文件**：`/data`若包含应用程序运行依赖的文件（如数据库数据、配置文件），删除前务必确认用途（可通过`file 文件名`查看文件类型）。
+- **避免删除正在使用的文件**：若文件被进程占用，直接删除可能导致程序异常，建议先停止进程再删除，或用`echo "" > 文件名`清空内容。
+- **重要文件先备份**：不确定是否有用的文件，可先移动到临时目录（如`/tmp/backup`），观察一段时间后再删除。
+
+#### **4. 长期优化建议**
+
+- 定期通过脚本自动清理日志和旧备份（例如用`crontab`设置每周清理任务）。
+- 对大文件目录（如日志、备份）单独挂载分区，避免占满`/data`。
+- 启用日志轮转（`logrotate`），自动压缩和删除旧日志。
+
+
+
 ### yum配置
 
 [CentOS7配置阿里yum源 超详细！！！-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/1366034)
