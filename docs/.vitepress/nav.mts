@@ -153,6 +153,11 @@ export default [
                 "link": "/常用框架/SpringAI/SpringAI"
             },
             {
+                "text": "AI框架Spring AI Alibaba",
+                "icon": "iconfont icon-iconfontmoshi",
+                "link": "/常用框架/SpringAIAlibaba/1_SpringAIAlibaba概览"
+            },
+            {
                 "text": "监控工具SpringBootAdmin",
                 "icon": "iconfont icon-iconfontmoshi",
                 "link": "/Java/架构设计/分布式/分布式监控/SpringBootAdmin"
@@ -191,9 +196,9 @@ export default [
             {
                 "text": "博客笔记",
                 "items": [
-                    {"text": "🚀VuePress", "link": "/daily/博客文档/VitPress/0_Vitpress博客搭建"},
+                    {"text": "🚀VuePress", "link": "/daily/博客文档/Vuepress/0_Vuepress博客搭建"},
                     {"text": "🚀VitPress", "link": "/daily/博客文档/VitPress/0_Vitpress博客搭建"},
-                    {"text": "🚀其他", "link": "/daily/博客文档/Github_Pages加速"},
+                    {"text": "🚀其他", "link": "/daily/博客文档/其他博客文档/Github_Pages加速"},
                 ]
             },
             {

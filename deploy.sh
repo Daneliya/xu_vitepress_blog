@@ -12,7 +12,7 @@ cd docs/.vitepress/dist
 #cd ./public
 
 # 如果是发布到自定义域名
-echo 'http://luckilyxxl.xyz' > CNAME
+echo 'http://luckilyxxl.top' > CNAME
 
 git init
 git add -A

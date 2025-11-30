@@ -189,13 +189,23 @@ export const redisSidebar = generateSidebar({
     basePath: '/Redis/', // 侧边栏链接基础路径
 });
 
-// 常用框架教程侧边栏（匹配 /Python/ 路由）
+// 常用框架教程侧边栏（匹配 /常用框架/ 路由）
 export const frameSidebar = generateSidebar({
     ...vitepressSidebarOptions,
     documentRootPath: '/docs/', // 仅扫描Python目录
     scanStartPath: '/常用框架/', // 仅扫描Python目录
     resolvePath: '/常用框架/', // 侧边栏链接基础路径
     basePath: '/常用框架/', // 侧边栏链接基础路径
+    excludeByGlobPattern: ['SpringAIAlibaba/'], // 根据文件模式字符串数组排除文件或文件夹
+});
+
+// 常用框架教程侧边栏（匹配 /常用框架/SpringAIAlibaba 路由）
+export const frameAlibabaSidebar = generateSidebar({
+    ...vitepressSidebarOptions,
+    documentRootPath: '/docs/', // 仅扫描Python目录
+    scanStartPath: '/常用框架/SpringAIAlibaba/', // 仅扫描Python目录
+    resolvePath: '/常用框架/SpringAIAlibaba/', // 侧边栏链接基础路径
+    basePath: '/常用框架/SpringAIAlibaba/', // 侧边栏链接基础路径
 });
 
 // linux教程侧边栏（匹配 /Python/ 路由）
@@ -223,7 +233,16 @@ export const dailySidebar = generateSidebar({
     scanStartPath: '/daily/', // 仅扫描Python目录
     resolvePath: '/daily/', // 侧边栏链接基础路径
     basePath: '/daily/', // 侧边栏链接基础路径
-    excludeByGlobPattern: ['面试专栏/'], // 侧边栏链接基础路径
+    excludeByGlobPattern: ['面试专栏/', '博客文档/'], // 根据文件模式字符串数组排除文件或文件夹
+});
+
+// daily教程侧边栏（匹配 /Python/ 路由）
+export const blogSidebar = generateSidebar({
+    ...vitepressSidebarOptions,
+    documentRootPath: '/docs/', // 仅扫描Python目录
+    scanStartPath: '/daily/博客文档/', // 仅扫描Python目录
+    resolvePath: '/daily/博客文档/', // 侧边栏链接基础路径
+    basePath: '/daily/博客文档/', // 侧边栏链接基础路径
 });
 
 // daily教程侧边栏（匹配 /Python/ 路由）
@@ -263,9 +282,11 @@ export const sidebarConfig = {
     '/数据库/': databaseSidebar, // /Python/路由下显示Python侧边栏
     '/Redis/': redisSidebar, // /Python/路由下显示Python侧边栏
     '/常用框架/': frameSidebar, // /Python/路由下显示Python侧边栏
+    '/常用框架/SpringAIAlibaba/': frameAlibabaSidebar, // /Python/路由下显示Python侧边栏
     '/Linux/': linuxSidebar, // /Python/路由下显示Python侧边栏
     '/StableDiffusion/': StableDiffusionSidebar, // /Python/路由下显示Python侧边栏
     '/daily/': dailySidebar, // /Python/路由下显示Python侧边栏
+    '/daily/博客文档/': blogSidebar, // /Python/路由下显示Python侧边栏
     '/daily/面试专栏/': interviewSidebar, // /Python/路由下显示Python侧边栏
     // 2. 各导航专属侧边栏（调用通用方法，传入差异化参数）
     // '/Java/Java开发技巧/': createSidebar({

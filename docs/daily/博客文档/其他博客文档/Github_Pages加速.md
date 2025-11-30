@@ -26,11 +26,11 @@ categories:
 
 购买域名后，需要进行域名解析映射到Github Pages的域名上。
 
-![image-20241201141128561](../日常笔记/Github_Pages加速.assets/image-20241201141128561.png)
+![image-20241201141128561](../../日常笔记/Github_Pages加速.assets/image-20241201141128561.png)
 
 添加记录，确定保存。
 
-![image-20241201141214530](../日常笔记/Github_Pages加速.assets/image-20241201141214530.png)
+![image-20241201141214530](../../日常笔记/Github_Pages加速.assets/image-20241201141214530.png)
 
 
 
@@ -38,7 +38,7 @@ categories:
 
 到GitHub去绑定自己的域名
 
-![image-20241201141013087](../日常笔记/Github_Pages加速.assets/image-20241201141013087.png)
+![image-20241201141013087](../../日常笔记/Github_Pages加速.assets/image-20241201141013087.png)
 
 保存之后 github 会自动的在仓库根目录里生成一个`CNAME`文件，里面存储着域名配置信息。
 
@@ -60,15 +60,15 @@ Cloudflare地址：[https://dash.cloudflare.com/](https://dash.cloudflare.com/)
 
 账号注册好后，进入控制台，点击“添加站点”加入需要使用cdn加速的站点。
 
-![image-20241201142026997](../日常笔记/Github_Pages加速.assets/image-20241201142026997.png)
+![image-20241201142026997](../../日常笔记/Github_Pages加速.assets/image-20241201142026997.png)
 
 注意填入的站点域名不需要加入`www.`前缀，如下图。
 
-![image-20241201141935379](../日常笔记/Github_Pages加速.assets/image-20241201141935379.png)
+![image-20241201141935379](../../日常笔记/Github_Pages加速.assets/image-20241201141935379.png)
 
 完成以上步骤后，下一步选择计划，个人完全免费版本即可。
 
-![image-20241201145149001](../日常笔记/Github_Pages加速.assets/image-20241201145149001.png)
+![image-20241201145149001](../../日常笔记/Github_Pages加速.assets/image-20241201145149001.png)
 
 ### 3、添加DNS记录
 
@@ -85,7 +85,7 @@ Github Pages的IP为以下四个
 
 
 
-![image-20241201150408842](../日常笔记/Github_Pages加速.assets/image-20241201150408842.png)
+![image-20241201150408842](../../日常笔记/Github_Pages加速.assets/image-20241201150408842.png)
 
 
 
@@ -93,9 +93,9 @@ Github Pages的IP为以下四个
 
 通过域名的运营商修改对应的 DNS 记录
 
-![image-20241201145542728](../日常笔记/Github_Pages加速.assets/image-20241201145542728.png)
+![image-20241201145542728](../../日常笔记/Github_Pages加速.assets/image-20241201145542728.png)
 
-![image-20241201145526010](../日常笔记/Github_Pages加速.assets/image-20241201145526010.png)
+![image-20241201145526010](../../日常笔记/Github_Pages加速.assets/image-20241201145526010.png)
 
 
 

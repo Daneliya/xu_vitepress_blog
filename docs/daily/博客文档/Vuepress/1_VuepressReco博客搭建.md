@@ -1,3 +1,11 @@
+---
+title: VuepressReco博客搭建
+tags:
+  - 日常笔记
+categories:
+  - 日常笔记
+---
+
 
 
 > [vuepress-reco](https://theme-reco.vuejs.press/)
