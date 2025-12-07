@@ -1,5 +1,5 @@
 ---
-title: Human-in-the-Loop 人工介入
+title: A2A Agent 分布式智能体
 tags:
  - Spring AI Alibaba
 categories: 

@@ -1,5 +1,5 @@
 ---
-title: Human-in-the-Loop 人工介入
+title: Agent Tool 智能体作为工具
 tags:
  - Spring AI Alibaba
 categories: 

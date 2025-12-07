@@ -1,5 +1,5 @@
 ---
-title: Human-in-the-Loop 人工介入
+title: RAG 检索增强生成
 tags:
  - Spring AI Alibaba
 categories: 

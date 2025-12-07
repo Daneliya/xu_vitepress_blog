@@ -1,5 +1,5 @@
 ---
-title: Human-in-the-Loop 人工介入
+title: Multi-agent 多智能体
 tags:
  - Spring AI Alibaba
 categories: 
