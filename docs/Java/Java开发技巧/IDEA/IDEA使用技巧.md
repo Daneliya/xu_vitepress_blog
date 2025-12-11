@@ -175,6 +175,16 @@ edit —> color scheme —> general —> code（右侧面板中的code，点一�
 ~~~
 
 
+## 修改IDEA缓存文件路径
+
+https://blog.csdn.net/qq_45149764/article/details/120187333
+
+
+## 清除 IDEA 中 XML 文件屎黄色背景的方法
+
+https://www.cnblogs.com/liuyishi/p/16854506.html
+
+https://blog.csdn.net/qq_45069279/article/details/112094902
 
 ## 主题
 
